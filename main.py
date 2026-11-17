@@ -1,18 +1,35 @@
-import random
+# import random
 import sys
-import time
-from typing import Dict, Tuple
+# import time
+# from typing import Dict, Tuple
 
 
 STOP_WORD = 'СТОП'
 
 
 def load_words(filename):
-	...
-    
+    try:
+        with open(filename, 'r', encoding='utf-8') as file:
+            words = {}
+            for line in file:
+                line = line.strip()
+                if ',' in line:
+                    parts = line.split(',', 1)
+                    if len(parts) == 2:
+                        word, translation = parts
+                        words[word.strip()] = translation.strip()
+            return words
+    except FileNotFoundError:
+        print(f'Ошибка: файл {filename} не найден.')
+        sys.exit(1)
 
 
-def print_statistics(score, total_time):
+# Временная проверка — удали после теста.
+if __name__ == '__main__':
+    words = load_words('words.txt')
+    print(words)
+
+""" def print_statistics(score, total_time):
     ...
 
 
@@ -54,4 +71,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    main() """
