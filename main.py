@@ -1,8 +1,7 @@
 # import random
 import sys
-# import time
-# from typing import Dict, Tuple
-
+import time
+from typing import Tuple
 
 STOP_WORD = 'СТОП'
 
@@ -48,24 +47,41 @@ def add_words(words):
         words[word] = translation
 
 
+def print_statistics(score: int, total_time: float) -> None:
+    print(f'Ваш итоговый счёт: {score}')
+    if score > 0:
+        average_time = round(total_time / score, 2)
+        print(f'Время игры: {round(total_time, 2)} секунд (среднее время: {average_time} сек.)')
+    else:
+        print(f'Время игры: {round(total_time, 2)} секунд (среднее время: —)')
+
+
+def ask_and_check(word: str, correct: str) -> Tuple[bool, bool, float]:
+    print(f'Ваше слово: {word}')
+    start_time = time.time()
+    answer = input('Ваш перевод: ').strip()
+    end_time = time.time()
+    if answer.lower() == STOP_WORD.lower():
+        return True, False, 0.0
+    is_correct = answer.lower() == correct.lower()
+    answer_time = end_time - start_time
+    return False, is_correct, answer_time
+
+
 # Временная проверка — удали после теста.
 if __name__ == '__main__':
-    # Тестируем add_words
-    test_dict = {'дом': 'house'}
-    print("До добавления:", test_dict)
-    add_words(test_dict)
-    print("После добавления:", test_dict)
+    # 1. Тестируем print_statistics
+    print("--- Тест статистики ---")
+    print_statistics(3, 8.75)
+    print_statistics(0, 0.0)
+    # 2. Тестируем ask_and_check
+    print("\n--- Тест ask_and_check ---")
+    # Попробуй ввести правильный ответ 'cat', потом неправильный, потом 'СТОП'
+    exit_flag, is_correct, ans_time = ask_and_check('кот', 'cat')
+    print(f"Результат: выход={exit_flag}, верно={is_correct}, время={round(ans_time, 2)}")
 
 
 """
-def print_statistics(score, total_time):
-    ...
-
-
-def ask_and_check(word, correct):
-    ...
-
-
 def start_game(words):
     ...
 
