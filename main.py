@@ -1,4 +1,4 @@
-# import random
+import random
 import sys
 import time
 from typing import Tuple
@@ -68,24 +68,43 @@ def ask_and_check(word: str, correct: str) -> Tuple[bool, bool, float]:
     return False, is_correct, answer_time
 
 
+def start_game(words):
+    if not words:
+        print('Словарь пуст. Добавьте слова для игры.')
+        return
+
+    print(f'Чтобы закончить, введите {STOP_WORD}')
+    score = 0
+    total_time = 0.0
+    words_list = list(words.keys())
+
+    while True:
+        word = random.choice(words_list)
+        correct = words[word]
+        exit_flag, is_correct, answer_time = ask_and_check(word, correct)
+
+        if exit_flag:
+            break
+
+        total_time += answer_time
+        if is_correct:
+            score += 1
+            print(f'Верно! Время на ответ: {round(answer_time, 2)} секунд')
+        else:
+            print(f'Неправильно, правильный ответ: {correct} (Время на ответ: {round(answer_time, 2)} секунд)')
+
+    print('Спасибо за игру!')
+    print_statistics(score, total_time)
+
+
 # Временная проверка — удали после теста.
 if __name__ == '__main__':
-    # 1. Тестируем print_statistics
-    print("--- Тест статистики ---")
-    print_statistics(3, 8.75)
-    print_statistics(0, 0.0)
-    # 2. Тестируем ask_and_check
-    print("\n--- Тест ask_and_check ---")
-    # Попробуй ввести правильный ответ 'cat', потом неправильный, потом 'СТОП'
-    exit_flag, is_correct, ans_time = ask_and_check('кот', 'cat')
-    print(f"Результат: выход={exit_flag}, верно={is_correct}, время={round(ans_time, 2)}")
+    test_words = {'кот': 'cat', 'собака': 'dog', 'дом': 'house'}
+    print("--- Тест start_game ---")
+    start_game(test_words)
 
 
 """
-def start_game(words):
-    ...
-
-
 def train_until_mistake(words):
     ...
 
