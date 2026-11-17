@@ -1,111 +1,112 @@
-семья, family
-бабушка, grandmother
-дедушка, grandfather
-мама, mother
-папа, father
-сын, son
-дочь, daughter
-брат, brother
-сестра, sister
-родители, parents
-внук, grandson
-внучка, granddaughter
-тётя, aunt
-дядя, uncle
-муж, husband
-жена, wife
-ребёнок, child
-родственник, relative
-дом, house
-квартира, flat (apartment)
-комната, room
-кухня, kitchen
-спальня, bedroom
-гостиная, living room
-ванная, bathroom
-туалет, toilet
-прихожая, hallway
-коридор, corridor
-балкон, balcony
-окно, window
-дверь, door
-стена, wall
-пол, floor
-потолок, ceiling
-крыша, roof
-лестница, stairs
-подвал, basement
-чердак, attic
-гараж, garage
-сад, garden
-двор, yard
-забор, fence
-мебель, furniture
-стол, table
-стул, chair
-кресло, armchair
-диван, sofa
-кровать, bed
-шкаф, wardrobe
-полка, shelf
-комод, chest of drawers
-тумбочка, bedside table
-зеркало, mirror
-лампа, lamp
-люстра, chandelier
-ковёр, carpet (rug)
-шторы, curtains
-подушка, pillow
-одеяло, blanket
-матрас, mattress
-простыня, bedsheet
-уют, cosiness
-тепло, warmth
-свет, light
-чистота, cleanliness
-порядок, order
-свеча, candle
-камин, fireplace
-картина, painting
-фотография, photograph
-цветок, flower
-растение, plant
-ваза, vase
-часы, clock
-телевизор, TV
-телефон, phone
-холодильник, fridge
-плита, stove
-духовка, oven
-чайник, kettle
-микроволновка, microwave
-стиральная машина, washing machin
-пылесос, vacuum cleaner
-утюг, iron
-завтрак, breakfast
-обед, lunch
-ужин, dinner
-еда, food
-чай, tea
-кофе, coffee
-хлеб, bread
-молоко, milk
-суп, soup
-каша, porridge
-сахар, sugar
-соль, salt
-тарелка, plate
-чашка, cup
-ложка, spoon
-вилка, fork
-нож, knife
-стакан, glass
-готовить, to cook
-убирать, to clean
-мыть, to wash
-стирать, to do laundry
-гладить, to iron
-пылесосить, to vacuum
-отдыхать, to rest
-спать, to sleep
-жить, to live
+семья,family
+бабушка,grandmother
+дедушка,grandfather
+мама,mother
+папа,father
+сын,son
+дочь,daughter
+брат,brother
+сестра,sister
+родители,parents
+внук,grandson
+внучка,granddaughter
+тётя,aunt
+дядя,uncle
+муж,husband
+жена,wife
+ребёнок,child
+родственник,relative
+дом,house
+квартира,flat (apartment)
+комната,room
+кухня,kitchen
+спальня,bedroom
+гостиная,living room
+ванная,bathroom
+туалет,toilet
+прихожая,hallway
+коридор,corridor
+балкон,balcony
+окно,window
+дверь,door
+стена,wall
+пол,floor
+потолок,ceiling
+крыша,roof
+лестница,stairs
+подвал,basement
+чердак,attic
+гараж,garage
+сад,garden
+двор,yard
+забор,fence
+мебель,furniture
+стол,table
+стул,chair
+кресло,armchair
+диван,sofa
+кровать,bed
+шкаф,wardrobe
+полка,shelf
+комод,chest of drawers
+тумбочка,bedside table
+зеркало,mirror
+лампа,lamp
+люстра,chandelier
+ковёр,carpet (rug)
+шторы,curtains
+подушка,pillow
+одеяло,blanket
+матрас,mattress
+простыня,bedsheet
+уют,cosiness
+тепло,warmth
+свет,light
+чистота,cleanliness
+порядок,order
+свеча,candle
+камин,fireplace
+картина,painting
+фотография,photograph
+цветок,flower
+растение,plant
+ваза,vase
+часы,clock
+телевизор,TV
+телефон,phone
+холодильник,fridge
+плита,stove
+духовка,oven
+чайник,kettle
+микроволновка,microwave
+стиральная машина,washing machin
+пылесос,vacuum cleaner
+утюг,iron
+завтрак,breakfast
+обед,lunch
+ужин,dinner
+еда,food
+чай,tea
+кофе,coffee
+хлеб,bread
+молоко,milk
+суп,soup
+каша,porridge
+сахар,sugar
+соль,salt
+тарелка,plate
+чашка,cup
+ложка,spoon
+вилка,fork
+нож,knife
+стакан,glass
+готовить,to cook
+убирать,to clean
+мыть,to wash
+стирать,to do laundry
+гладить,to iron
+пылесосить,to vacuum
+отдыхать,to rest
+спать,to sleep
+жить,to live
+девочка,girl
