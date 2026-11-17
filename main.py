@@ -36,13 +36,25 @@ def show_all_words(words):
     print('; '.join(pairs))
 
 
+def add_words(words):
+    print(f'Чтобы закончить, введите {STOP_WORD}')
+    while True:
+        word = input('Введите слово: ').strip()
+        if word.lower() == STOP_WORD.lower():
+            break
+        translation = input('Введите перевод: ').strip()
+        if translation.lower() == STOP_WORD.lower():
+            break
+        words[word] = translation
+
+
 # Временная проверка — удали после теста.
 if __name__ == '__main__':
-    # Тестируем show_all_words
-    test_words = {'кот': 'cat', 'собака': 'dog', 'дерево': 'tree'}
-    show_all_words(test_words)
-    print("---")
-    show_all_words({})  # Проверка на пустой словарь
+    # Тестируем add_words
+    test_dict = {'дом': 'house'}
+    print("До добавления:", test_dict)
+    add_words(test_dict)
+    print("После добавления:", test_dict)
 
 
 """
@@ -59,10 +71,6 @@ def start_game(words):
 
 
 def train_until_mistake(words):
-    ...
-
-
-def add_words(words):
     ...
 
 
