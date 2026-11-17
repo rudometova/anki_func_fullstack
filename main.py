@@ -48,6 +48,7 @@ def add_words(words):
 
 
 def print_statistics(score: int, total_time: float) -> None:
+
     print(f'Ваш итоговый счёт: {score}')
     if score > 0:
         average_time = round(total_time / score, 2)
@@ -97,18 +98,44 @@ def start_game(words):
     print_statistics(score, total_time)
 
 
+def train_until_mistake(words):
+    if not words:
+        print('Словарь пуст. Добавьте слова для игры.')
+        return
+
+    print('Режим: игра до первой ошибки! Чтобы выйти вручную, введите СТОП')
+    score = 0
+    total_time = 0.0
+    words_list = list(words.keys())
+
+    while True:
+        word = random.choice(words_list)
+        correct = words[word]
+        exit_flag, is_correct, answer_time = ask_and_check(word, correct)
+
+        if exit_flag:
+            print('Выход из режима по запросу пользователя.')
+            break
+
+        total_time += answer_time
+        if is_correct:
+            score += 1
+            print(f'Верно! Всего очков: {score} (ответ за {round(answer_time, 2)} секунд)')
+        else:
+            print(f'Ошибка! Неверно. Правильный ответ: {correct}')
+            break
+
+    print_statistics(score, total_time)
+
+
 # Временная проверка — удали после теста.
 if __name__ == '__main__':
     test_words = {'кот': 'cat', 'собака': 'dog', 'дом': 'house'}
-    print("--- Тест start_game ---")
-    start_game(test_words)
+    print("--- Тест train_until_mistake ---")
+    train_until_mistake(test_words)
 
 
 """
-def train_until_mistake(words):
-    ...
-
-
 def main():
     while True:
         menu = '''Меню:
