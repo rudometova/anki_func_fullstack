@@ -31,11 +31,19 @@ def save_words(words, filename):
     print(f'Было сохранено {len(words)} слов в файл {filename}.')
 
 
-# Временная проверка
+def show_all_words(words):
+    pairs = [f'{word} - {translation}' for word, translation in words.items()]
+    print('; '.join(pairs))
+
+
+# Временная проверка — удали после теста.
 if __name__ == '__main__':
-    # Тестируем save_words: создаём словарь и сохраняем его в тестовый файл.
-    test_words = {'яблоко': 'apple', 'кошка': 'cat'}
-    save_words(test_words, 'test_save.txt')
+    # Тестируем show_all_words
+    test_words = {'кот': 'cat', 'собака': 'dog', 'дерево': 'tree'}
+    show_all_words(test_words)
+    print("---")
+    show_all_words({})  # Проверка на пустой словарь
+
 
 """
 def print_statistics(score, total_time):
@@ -55,10 +63,6 @@ def train_until_mistake(words):
 
 
 def add_words(words):
-    ...
-
-
-def show_all_words(words):
     ...
 
 
