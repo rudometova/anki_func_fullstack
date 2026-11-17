@@ -24,12 +24,21 @@ def load_words(filename):
         sys.exit(1)
 
 
-# Временная проверка — удали после теста.
-if __name__ == '__main__':
-    words = load_words('words.txt')
-    print(words)
+def save_words(words, filename):
+    with open(filename, 'w', encoding='utf-8') as file:
+        for word, translation in words.items():
+            file.write(f'{word},{translation}\n')
+    print(f'Было сохранено {len(words)} слов в файл {filename}.')
 
-""" def print_statistics(score, total_time):
+
+# Временная проверка
+if __name__ == '__main__':
+    # Тестируем save_words: создаём словарь и сохраняем его в тестовый файл.
+    test_words = {'яблоко': 'apple', 'кошка': 'cat'}
+    save_words(test_words, 'test_save.txt')
+
+"""
+def print_statistics(score, total_time):
     ...
 
 
@@ -53,10 +62,6 @@ def show_all_words(words):
     ...
 
 
-def save_words(words, filename):
-    ...
-
-
 def main():
     while True:
         menu = '''Меню:
@@ -71,4 +76,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main() """
+    main()"""
